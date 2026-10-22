@@ -1,0 +1,146 @@
+{
+    "format": "magna-site-kit",
+    "version": 1,
+    "pages": [],
+    "templates": [
+        {
+            "title": "Starter header",
+            "slug": "header",
+            "kind": "part",
+            "status": "published",
+            "blocks_data": [
+                {
+                    "id": "starter-sec-14",
+                    "type": "section",
+                    "settings": {},
+                    "columns": [
+                        {
+                            "id": "starter-col-15",
+                            "span": 3,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-32",
+                                    "block": "logo",
+                                    "settings": {},
+                                    "data": {
+                                        "text": "",
+                                        "url": "/",
+                                        "height": "32px",
+                                        "alt": "",
+                                        "media_id": "",
+                                        "heading": "no"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "starter-col-16",
+                            "span": 8,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-33",
+                                    "block": "nav",
+                                    "settings": {},
+                                    "data": {
+                                        "menu": "primary"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "starter-col-17",
+                            "span": 1,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-34",
+                                    "block": "scheme-toggle",
+                                    "settings": {},
+                                    "data": {
+                                        "size": "md",
+                                        "label": "Switch between light and dark"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_settings": {}
+        },
+        {
+            "title": "Starter footer",
+            "slug": "footer",
+            "kind": "part",
+            "status": "published",
+            "blocks_data": [
+                {
+                    "id": "starter-sec-15",
+                    "type": "section",
+                    "settings": {},
+                    "columns": [
+                        {
+                            "id": "starter-col-18",
+                            "span": 6,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-35",
+                                    "block": "logo",
+                                    "settings": {},
+                                    "data": {
+                                        "text": "",
+                                        "url": "/",
+                                        "height": "28px",
+                                        "alt": "",
+                                        "media_id": "",
+                                        "heading": "no"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-36",
+                                    "block": "text",
+                                    "settings": {},
+                                    "data": {
+                                        "body": "<p>Built with the Starter theme for Magna Pages.</p>"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "starter-col-19",
+                            "span": 6,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-37",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "Explore",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-38",
+                                    "block": "nav",
+                                    "settings": {},
+                                    "data": {
+                                        "menu": "footer"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_settings": {}
+        }
+    ],
+    "menus": [],
+    "patterns": [],
+    "settings": {}
+}

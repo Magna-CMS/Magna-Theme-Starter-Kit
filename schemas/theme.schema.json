@@ -1,0 +1,75 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Magna-CMS/Magna-Theme-Starter-Kit/main/schemas/theme.schema.json",
+    "title": "Magna theme manifest (theme.json)",
+    "description": "The manifest of a Magna theme or theme addon. Read by Magna core (ThemeManifest) and Magna Pages. Unknown keys are ignored.",
+    "type": "object",
+    "required": ["name", "version"],
+    "properties": {
+        "$schema": { "type": "string" },
+        "name": {
+            "description": "Package name in vendor/name form. Lowercase letters, digits, '-' and '_'; exactly one slash. The theme is installed at themes/<vendor>/<name>/.",
+            "type": "string",
+            "pattern": "^[a-z0-9]([a-z0-9_-]*[a-z0-9])?/[a-z0-9]([a-z0-9_-]*[a-z0-9])?$"
+        },
+        "displayName": { "description": "Shown on the Themes page. Defaults to name.", "type": "string" },
+        "description": { "description": "One or two sentences shown on the Themes page.", "type": "string" },
+        "version": {
+            "description": "Semantic version (MAJOR.MINOR.PATCH). Update checks compare it.",
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$"
+        },
+        "author": { "type": "string" },
+        "license": { "description": "SPDX identifier, e.g. MIT.", "type": "string" },
+        "homepage": { "type": "string", "format": "uri" },
+        "screenshot": {
+            "description": "Path, relative to the theme folder, of the image shown on the Themes page (1200×900 PNG or JPEG recommended).",
+            "type": "string"
+        },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "type": {
+            "description": "A full theme, or an addon that styles a paired plugin's blocks inside a host theme.",
+            "enum": ["magna-theme", "magna-theme-addon"],
+            "default": "magna-theme"
+        },
+        "compat": {
+            "type": "object",
+            "properties": {
+                "magna": {
+                    "description": "Composer-style constraint on the Magna core version, e.g. \"^1.6.2\". Defaults to \"^1.0\". Checked on activation.",
+                    "type": "string"
+                },
+                "plugins": {
+                    "description": "Plugin versions this theme's rendering needs, as package name → constraint. Activation is refused (with a message naming the gap) when a floor is not met. Declare magna-cms/pages.",
+                    "type": "object",
+                    "propertyNames": { "pattern": "^[a-z0-9]([a-z0-9_-]*[a-z0-9])?/[a-z0-9]([a-z0-9_-]*[a-z0-9])?$" },
+                    "additionalProperties": { "type": "string", "minLength": 1 }
+                }
+            }
+        },
+        "demoContent": {
+            "description": "Site-kit bundles imported by \"Include demo content\" / \"Import demo content\". Only .json files inside starter/. Without this key every starter/*.json counts.",
+            "type": "array",
+            "items": { "type": "string", "pattern": "^starter/[^/]+\\.json$" }
+        },
+        "blockSeeds": {
+            "description": "What a freshly inserted block starts with, per block handle, merged over the block schema's own seed.",
+            "type": "object",
+            "additionalProperties": { "type": "object" }
+        },
+        "extends": {
+            "description": "Addon only: the host theme name, or \"*\" for any theme.",
+            "type": "string",
+            "pattern": "^(\\*|[a-z0-9]([a-z0-9_-]*[a-z0-9])?/[a-z0-9]([a-z0-9_-]*[a-z0-9])?)$"
+        },
+        "pairsWith": {
+            "description": "Addon only: the plugins whose blocks this addon may restyle. Core blocks can never be overridden by an addon.",
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+        },
+        "priority": { "description": "Addon only: tie-break between addons (higher wins).", "type": "integer" }
+    },
+    "if": { "properties": { "type": { "const": "magna-theme-addon" } }, "required": ["type"] },
+    "then": { "required": ["extends", "pairsWith"] }
+}

@@ -1,0 +1,135 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Magna-CMS/Magna-Theme-Starter-Kit/main/schemas/site-kit.schema.json",
+    "title": "Magna Pages site kit (starter/*.json)",
+    "description": "A theme's demo content: pages, templates, menus, patterns and settings, cross-referenced by slug. Imported add-only by \"Include demo content\"; applied as an upsert by php artisan magna:site:sync. Plugin sections use namespaced keys such as \"blog:posts\" or \"forms:forms\".",
+    "type": "object",
+    "required": ["format", "version"],
+    "properties": {
+        "format": { "const": "magna-site-kit" },
+        "version": { "const": 1 },
+        "pages": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "templates": {
+            "type": "array",
+            "items": {
+                "allOf": [{ "$ref": "#/$defs/entry" }],
+                "required": ["kind"],
+                "properties": {
+                    "kind": {
+                        "description": "part = header/footer (slug \"header\" or \"footer\" becomes the site's chrome); popup = an overlay; collection = \"{type}-single\" template.",
+                        "enum": ["part", "page", "collection", "popup", "system"]
+                    }
+                }
+            }
+        },
+        "menus": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["handle", "name", "tree"],
+                "properties": {
+                    "handle": { "description": "\"primary\" feeds $headerMenu; any handle is reachable through $menu('handle').", "type": "string" },
+                    "name": { "type": "string" },
+                    "tree": { "type": "array", "items": { "$ref": "#/$defs/menuItem" } }
+                }
+            }
+        },
+        "patterns": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "kind", "document"],
+                "properties": {
+                    "name": { "description": "Upserted by name.", "type": "string" },
+                    "kind": { "type": "string", "examples": ["section"] },
+                    "document": { "$ref": "#/$defs/section" }
+                }
+            }
+        },
+        "settings": {
+            "type": "object",
+            "properties": {
+                "home_page_slug": { "type": "string" },
+                "not_found_page_slug": { "type": "string" },
+                "maintenance_mode": { "type": "boolean" },
+                "collection_mounts": { "type": "array" }
+            }
+        }
+    },
+    "$defs": {
+        "entry": {
+            "type": "object",
+            "required": ["title", "slug"],
+            "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "slug": { "type": "string", "minLength": 1 },
+                "status": { "enum": ["published", "draft"], "description": "Only \"published\" entries render." },
+                "path": { "type": "string" },
+                "locale": { "type": "string" },
+                "translation_group": { "type": "string" },
+                "template": { "type": "string" },
+                "meta_title": { "type": "string" },
+                "meta_description": { "type": "string" },
+                "blocks_data": { "type": "array", "items": { "$ref": "#/$defs/section" } },
+                "page_settings": { "type": "object" }
+            }
+        },
+        "section": {
+            "type": "object",
+            "required": ["id", "type"],
+            "properties": {
+                "id": { "type": "string", "minLength": 1, "description": "Unique within the document." },
+                "type": { "enum": ["section", "ref"] },
+                "part": { "type": "string", "description": "ref sections: the template part's slug." },
+                "settings": {
+                    "type": "object",
+                    "properties": {
+                        "cssClass": { "type": "string", "description": "Free text — your theme's band vocabulary." },
+                        "anchor": { "type": "string" },
+                        "tokenOverrides": { "type": "object", "additionalProperties": { "type": "string" } },
+                        "style": { "type": "object" },
+                        "row": { "type": "object" }
+                    }
+                },
+                "columns": {
+                    "type": "array",
+                    "description": "Spans must sum to 12.",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "span"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "span": { "type": "integer", "minimum": 1, "maximum": 12 },
+                            "settings": { "type": "object" },
+                            "blocks": { "type": "array", "items": { "$ref": "#/$defs/block" } }
+                        }
+                    }
+                }
+            }
+        },
+        "block": {
+            "type": "object",
+            "required": ["id", "block"],
+            "properties": {
+                "id": { "type": "string", "minLength": 1 },
+                "block": { "type": "string", "description": "Block handle, e.g. heading. See docs/reference/blocks.md." },
+                "settings": { "type": "object" },
+                "data": { "type": "object", "description": "Field values. json fields are JSON strings." },
+                "children": { "type": "array", "items": { "$ref": "#/$defs/block" } }
+            }
+        },
+        "menuItem": {
+            "type": "object",
+            "required": ["label"],
+            "properties": {
+                "label": { "type": "string" },
+                "type": { "enum": ["page", "url"] },
+                "page_slug": { "type": "string" },
+                "url": { "type": "string" },
+                "target": { "enum": ["", "_blank"] },
+                "settings": { "type": "object" },
+                "children": { "type": "array", "items": { "$ref": "#/$defs/menuItem" } }
+            }
+        }
+    }
+}

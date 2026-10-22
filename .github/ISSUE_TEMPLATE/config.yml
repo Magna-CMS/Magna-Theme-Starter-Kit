@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Magna CMS core issues
+    url: https://github.com/Magna-CMS/Magna/issues
+    about: Bugs in Magna itself (not in this kit) belong here.
+  - name: Magna Pages issues
+    url: https://github.com/Magna-CMS/Magna-Pages/issues
+    about: Bugs in the page builder or its rendering belong here.

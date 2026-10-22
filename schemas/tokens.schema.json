@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Magna-CMS/Magna-Theme-Starter-Kit/main/schemas/tokens.schema.json",
+    "title": "Magna theme design tokens (tokens.json)",
+    "description": "Categories of design tokens, compiled by Magna Pages to CSS custom properties: colors.primary → --color-primary; every other category uses the kebab-cased key alone (layout.maxWidth → --max-width). Values may not contain ; ( < or > — no rgb(), hsl(), calc(), clamp(), var() or url().",
+    "type": "object",
+    "properties": {
+        "$schema": { "type": "string" }
+    },
+    "additionalProperties": {
+        "description": "A category of tokens. Name it freely; only \"colors\" is special (its variables get a color- prefix).",
+        "type": "object",
+        "propertyNames": { "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "additionalProperties": {
+            "oneOf": [
+                { "$ref": "#/$defs/value" },
+                {
+                    "type": "object",
+                    "required": ["value"],
+                    "properties": {
+                        "value": { "$ref": "#/$defs/value", "description": "The light (default) value." },
+                        "dark": { "$ref": "#/$defs/value", "description": "The dark reading. Tokens without one are the same in both schemes." },
+                        "label": { "type": "string", "description": "Human name for documentation and tooling." }
+                    }
+                }
+            ]
+        }
+    },
+    "$defs": {
+        "value": {
+            "type": ["string", "number"],
+            "pattern": "^[^;(<>]+$"
+        }
+    }
+}

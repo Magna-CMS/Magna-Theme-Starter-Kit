@@ -1,0 +1,44 @@
+name: Drift
+
+# Regenerates the block reference from the latest Magna and Magna Pages and
+# fails when it differs from what is committed — the signal that the guide,
+# the lint data or the Starter theme needs a look.
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  blocks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Magna-CMS/Magna
+          path: upstream/magna
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Magna-CMS/Magna-Pages
+          path: upstream/pages
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Regenerate the block reference
+        run: php tools/sync-blocks.php --magna=upstream/magna --pages=upstream/pages
+
+      - name: Fail on drift
+        run: |
+          if ! git diff --exit-code -- docs/reference/blocks.md tools/data/blocks.json; then
+            echo "::error::Magna's block library changed. Run tools/sync-blocks.php, review the diff and update the Starter theme and guide."
+            exit 1
+          fi

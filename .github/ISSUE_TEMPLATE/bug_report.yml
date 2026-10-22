@@ -1,0 +1,36 @@
+name: Bug report
+description: The Starter theme or a tool (theme-lint, new-theme, package) misbehaves.
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Starter theme
+        - theme-lint
+        - new-theme
+        - package
+        - sync-blocks
+        - Schemas
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: For lint disagreements, paste both `theme-lint` and `magna:theme:check` output.
+      render: text
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: PHP 8.3, Magna CMS 1.7.0, Magna Pages 0.6.0-alpha, kit 1.0.0
+    validations:
+      required: true

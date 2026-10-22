@@ -1,0 +1,45 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Magna-CMS/Magna-Theme-Starter-Kit/main/schemas/theme.schema.json",
+    "name": "acme/starter",
+    "displayName": "Starter",
+    "description": "A small, readable reference theme for Magna Pages: one layout, a token palette with light and dark values, styles for every core block, and demo content.",
+    "version": "1.0.0",
+    "author": "Magna CMS",
+    "license": "MIT",
+    "homepage": "https://github.com/Magna-CMS/Magna-Theme-Starter-Kit",
+    "screenshot": "screenshot.png",
+    "type": "magna-theme",
+    "tags": [
+        "starter",
+        "business",
+        "minimal",
+        "dark-mode"
+    ],
+    "compat": {
+        "magna": "^1.6.2",
+        "plugins": {
+            "magna-cms/pages": ">=0.3.0-alpha"
+        }
+    },
+    "demoContent": [
+        "starter/demo.json"
+    ],
+    "blockSeeds": {
+        "heading": {
+            "level": "h2",
+            "text": "Section title"
+        },
+        "cta": {
+            "headline": "Ready when you are.",
+            "body": "One short sentence that tells a visitor what happens next.",
+            "button_primary_label": "Get started",
+            "button_primary_url": "#",
+            "layout": "centered"
+        },
+        "callout": {
+            "heading": "Good to know",
+            "body": "A short note set apart from the body text.",
+            "tone": "info"
+        }
+    }
+}

@@ -1,0 +1,687 @@
+{
+    "format": "magna-site-kit",
+    "version": 1,
+    "pages": [
+        {
+            "title": "Home",
+            "slug": "home",
+            "status": "published",
+            "meta_title": "",
+            "meta_description": "Starter — a clean, commented reference theme for Magna Pages.",
+            "blocks_data": [
+                {
+                    "id": "starter-sec-1",
+                    "type": "section",
+                    "settings": {},
+                    "columns": [
+                        {
+                            "id": "starter-col-1",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-1",
+                                    "block": "hero",
+                                    "settings": {},
+                                    "data": {
+                                        "layout": "centered",
+                                        "headline": "A clean starting point for your Magna theme.",
+                                        "subheadline": "Starter is a small, fully commented reference theme. Read it, copy it, and make it yours.",
+                                        "cta_primary_label": "See what's inside",
+                                        "cta_primary_url": "#features",
+                                        "cta_secondary_label": "About this site",
+                                        "cta_secondary_url": "/about",
+                                        "background_id": ""
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-2",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--center",
+                        "anchor": "features"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-2",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-2",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "Everything a first theme needs",
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-3",
+                                    "block": "text",
+                                    "settings": {},
+                                    "data": {
+                                        "body": "<p>Starter covers the whole contract between a theme and Magna Pages, and nothing more. Read it in an afternoon.</p>"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-4",
+                                    "block": "features",
+                                    "settings": {},
+                                    "data": {
+                                        "layout": "icon-grid",
+                                        "items": "[{\"icon\": \"⚡\", \"title\": \"Fast by default\", \"description\": \"One inline stylesheet, no build step and no web fonts to wait for.\"}, {\"icon\": \"◐\", \"title\": \"Light and dark\", \"description\": \"Every colour token ships a dark value. Visitors pick, the page stays cacheable.\"}, {\"icon\": \"✎\", \"title\": \"Editable everywhere\", \"description\": \"Retune colours, fonts and widths in the builder's Design panel, without touching a file.\"}, {\"icon\": \"♿\", \"title\": \"Accessible\", \"description\": \"A skip link, visible focus, real buttons and colours that pass contrast checks.\"}, {\"icon\": \"⌘\", \"title\": \"Every core block\", \"description\": \"Heroes, pricing, FAQs, tables, code and more — all styled from the same tokens.\"}, {\"icon\": \"⧉\", \"title\": \"Made to be copied\", \"description\": \"Small, commented files. Rename it, restyle it, and ship your own theme.\"}]"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-3",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--muted"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-3",
+                            "span": 6,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-5",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "Built from tokens",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-6",
+                                    "block": "text",
+                                    "settings": {},
+                                    "data": {
+                                        "body": "<p>Colours, fonts, widths and radii live in <code>tokens.json</code>. The stylesheet only ever reads them, so one change repaints the whole site — light and dark.</p>"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-7",
+                                    "block": "button",
+                                    "settings": {},
+                                    "data": {
+                                        "label": "Learn about design tokens",
+                                        "url": "https://github.com/Magna-CMS/Magna-Theme-Starter-Kit/blob/main/docs/04-design-tokens.md",
+                                        "style": "outline",
+                                        "size": "md",
+                                        "target": "_self"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "starter-col-4",
+                            "span": 6,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-8",
+                                    "block": "stats",
+                                    "settings": {},
+                                    "data": {
+                                        "columns": "2",
+                                        "items": "[{\"value\": \"1\", \"label\": \"Layout file\"}, {\"value\": \"25\", \"label\": \"Design tokens\"}, {\"value\": \"0\", \"label\": \"Build steps\"}, {\"value\": \"100%\", \"label\": \"Core blocks styled\"}]"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-4",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--center",
+                        "anchor": "pricing"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-5",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-9",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "Simple, honest pricing",
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-10",
+                                    "block": "pricing",
+                                    "settings": {},
+                                    "data": {
+                                        "tiers": "[{\"name\": \"Personal\", \"price\": \"$0\", \"period\": \"month\", \"features\": [\"One site\", \"Every core block\", \"Community support\"], \"cta_label\": \"Start free\", \"cta_url\": \"#\", \"highlighted\": false}, {\"name\": \"Studio\", \"price\": \"$19\", \"period\": \"month\", \"features\": [\"Five sites\", \"Priority updates\", \"Email support\"], \"cta_label\": \"Choose Studio\", \"cta_url\": \"#\", \"highlighted\": true}, {\"name\": \"Agency\", \"price\": \"$49\", \"period\": \"month\", \"features\": [\"Unlimited sites\", \"White-label\", \"Phone support\"], \"cta_label\": \"Talk to us\", \"cta_url\": \"#\", \"highlighted\": false}]"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-5",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--muted starter-band--center"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-6",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-11",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "What people say",
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-12",
+                                    "block": "testimonials",
+                                    "settings": {},
+                                    "data": {
+                                        "layout": "cards",
+                                        "items": "[{\"quote\": \"I had a branded site running in an afternoon. The tokens did most of the work.\", \"author\": \"Priya N.\", \"role\": \"Designer\"}, {\"quote\": \"Finally a starter theme short enough to actually read.\", \"author\": \"Marco D.\", \"role\": \"Developer\"}, {\"quote\": \"Dark mode just worked. I didn't write a line of JavaScript.\", \"author\": \"Lena K.\", \"role\": \"Founder\"}]"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-6",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--narrow",
+                        "anchor": "faq"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-7",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-13",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "Questions, answered",
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-14",
+                                    "block": "faq",
+                                    "settings": {},
+                                    "data": {
+                                        "items": [
+                                            {
+                                                "question": "Do I need to know PHP to build a theme?",
+                                                "answer": "No. A theme is JSON, Blade templates and CSS. Blade is HTML with a few {{ }} tags for printing values."
+                                            },
+                                            {
+                                                "question": "Can editors change the colours?",
+                                                "answer": "Yes. Every token in tokens.json appears in Pages → Design, where a site can override it without editing the theme."
+                                            },
+                                            {
+                                                "question": "Will updating the theme overwrite my pages?",
+                                                "answer": "No. Demo content is only added where a page or menu does not exist yet, and a theme update never re-applies it on its own."
+                                            },
+                                            {
+                                                "question": "Where do I start?",
+                                                "answer": "Copy this theme with tools/new-theme.php, change tokens.json, then work through the guide in docs/."
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-7",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--brand starter-band--center"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-8",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-15",
+                                    "block": "cta",
+                                    "settings": {},
+                                    "data": {
+                                        "layout": "centered",
+                                        "headline": "Ready to build your own?",
+                                        "body": "Copy Starter, rename it, and change one token. You'll see the whole site follow.",
+                                        "button_primary_label": "Read the guide",
+                                        "button_primary_url": "https://github.com/Magna-CMS/Magna-Theme-Starter-Kit",
+                                        "button_secondary_label": "",
+                                        "button_secondary_url": ""
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "About",
+            "slug": "about",
+            "status": "published",
+            "meta_title": "",
+            "meta_description": "How the Starter theme styles long-form content.",
+            "blocks_data": [
+                {
+                    "id": "starter-sec-8",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--narrow"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-9",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-16",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h1",
+                                        "text": "About",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-17",
+                                    "block": "text",
+                                    "settings": {},
+                                    "data": {
+                                        "body": "<p>This page shows how Starter styles long-form content: headings, rich text, a quote, a callout, a table and a team grid.</p><h2>Why a starter theme?</h2><p>A theme for Magna Pages is <strong>data</strong>: a manifest, a palette of tokens and a few Blade templates. Starter keeps each of those as small as it can be, so the shape of the contract is easy to see.</p><ul><li>One layout shell</li><li>Two example block overrides</li><li>A stylesheet built only from tokens</li></ul>"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-18",
+                                    "block": "quote",
+                                    "settings": {},
+                                    "data": {
+                                        "quote": "Make it work, make it right, make it fast — in that order.",
+                                        "attribution": "Kent Beck",
+                                        "source": ""
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-19",
+                                    "block": "callout",
+                                    "settings": {},
+                                    "data": {
+                                        "heading": "Tip",
+                                        "body": "Open this page in the builder and change any block. What you see in the canvas is exactly what ships.",
+                                        "tone": "info"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-20",
+                                    "block": "table",
+                                    "settings": {},
+                                    "data": {
+                                        "rows": "Token\tCSS variable\ncolors.primary\t--color-primary\nlayout.maxWidth\t--max-width\ntypography.fontBody\t--font-body",
+                                        "separator": "tab",
+                                        "header": "header",
+                                        "rowHeader": "data",
+                                        "footer": "data",
+                                        "caption": "How tokens.json keys become CSS variables"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "starter-sec-9",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--muted"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-10",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-21",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h2",
+                                        "text": "The team",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-22",
+                                    "block": "team",
+                                    "settings": {},
+                                    "data": {
+                                        "columns": "3",
+                                        "members": "[{\"name\": \"Your Name\", \"role\": \"Founder\", \"bio\": \"Add a photo and a short bio from the inspector.\"}, {\"name\": \"A. Colleague\", \"role\": \"Design\", \"bio\": \"Two or three lines is plenty.\"}, {\"name\": \"B. Colleague\", \"role\": \"Engineering\", \"bio\": \"Keep the tone of the rest of the site.\"}]"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Page not found",
+            "slug": "not-found",
+            "status": "published",
+            "meta_title": "",
+            "meta_description": "",
+            "blocks_data": [
+                {
+                    "id": "starter-sec-10",
+                    "type": "section",
+                    "settings": {
+                        "cssClass": "starter-band--center starter-band--narrow"
+                    },
+                    "columns": [
+                        {
+                            "id": "starter-col-11",
+                            "span": 12,
+                            "settings": {},
+                            "blocks": [
+                                {
+                                    "id": "starter-blk-23",
+                                    "block": "heading",
+                                    "settings": {},
+                                    "data": {
+                                        "level": "h1",
+                                        "text": "Page not found",
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-24",
+                                    "block": "text",
+                                    "settings": {},
+                                    "data": {
+                                        "body": "<p>The page you were looking for has moved, or never existed.</p>"
+                                    }
+                                },
+                                {
+                                    "id": "starter-blk-25",
+                                    "block": "button",
+                                    "settings": {},
+                                    "data": {
+                                        "label": "Back to the home page",
+                                        "url": "/",
+                                        "style": "primary",
+                                        "size": "lg",
+                                        "target": "_self"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "templates": [],
+    "menus": [
+        {
+            "handle": "primary",
+            "name": "Primary navigation",
+            "tree": [
+                {
+                    "label": "Home",
+                    "type": "page",
+                    "page_slug": "home",
+                    "url": "",
+                    "target": "",
+                    "settings": {},
+                    "children": []
+                },
+                {
+                    "label": "Features",
+                    "type": "url",
+                    "url": "/#features",
+                    "target": "",
+                    "settings": {},
+                    "children": []
+                },
+                {
+                    "label": "Pricing",
+                    "type": "url",
+                    "url": "/#pricing",
+                    "target": "",
+                    "settings": {},
+                    "children": []
+                },
+                {
+                    "label": "About",
+                    "type": "page",
+                    "page_slug": "about",
+                    "url": "",
+                    "target": "",
+                    "settings": {},
+                    "children": []
+                }
+            ]
+        },
+        {
+            "handle": "footer",
+            "name": "Footer links",
+            "tree": [
+                {
+                    "label": "About",
+                    "type": "page",
+                    "page_slug": "about",
+                    "url": "",
+                    "target": "",
+                    "settings": {},
+                    "children": []
+                },
+                {
+                    "label": "FAQ",
+                    "type": "url",
+                    "url": "/#faq",
+                    "target": "",
+                    "settings": {},
+                    "children": []
+                },
+                {
+                    "label": "Theme guide",
+                    "type": "url",
+                    "url": "https://github.com/Magna-CMS/Magna-Theme-Starter-Kit",
+                    "target": "_blank",
+                    "settings": {},
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "patterns": [
+        {
+            "name": "Starter — Feature grid",
+            "kind": "section",
+            "document": {
+                "id": "starter-sec-11",
+                "type": "section",
+                "settings": {
+                    "cssClass": "starter-band--center",
+                    "anchor": "features"
+                },
+                "columns": [
+                    {
+                        "id": "starter-col-12",
+                        "span": 12,
+                        "settings": {},
+                        "blocks": [
+                            {
+                                "id": "starter-blk-26",
+                                "block": "heading",
+                                "settings": {},
+                                "data": {
+                                    "level": "h2",
+                                    "text": "Everything a first theme needs",
+                                    "align": "center"
+                                }
+                            },
+                            {
+                                "id": "starter-blk-27",
+                                "block": "text",
+                                "settings": {},
+                                "data": {
+                                    "body": "<p>Starter covers the whole contract between a theme and Magna Pages, and nothing more. Read it in an afternoon.</p>"
+                                }
+                            },
+                            {
+                                "id": "starter-blk-28",
+                                "block": "features",
+                                "settings": {},
+                                "data": {
+                                    "layout": "icon-grid",
+                                    "items": "[{\"icon\": \"⚡\", \"title\": \"Fast by default\", \"description\": \"One inline stylesheet, no build step and no web fonts to wait for.\"}, {\"icon\": \"◐\", \"title\": \"Light and dark\", \"description\": \"Every colour token ships a dark value. Visitors pick, the page stays cacheable.\"}, {\"icon\": \"✎\", \"title\": \"Editable everywhere\", \"description\": \"Retune colours, fonts and widths in the builder's Design panel, without touching a file.\"}, {\"icon\": \"♿\", \"title\": \"Accessible\", \"description\": \"A skip link, visible focus, real buttons and colours that pass contrast checks.\"}, {\"icon\": \"⌘\", \"title\": \"Every core block\", \"description\": \"Heroes, pricing, FAQs, tables, code and more — all styled from the same tokens.\"}, {\"icon\": \"⧉\", \"title\": \"Made to be copied\", \"description\": \"Small, commented files. Rename it, restyle it, and ship your own theme.\"}]"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Starter — FAQ",
+            "kind": "section",
+            "document": {
+                "id": "starter-sec-12",
+                "type": "section",
+                "settings": {
+                    "cssClass": "starter-band--narrow",
+                    "anchor": "faq"
+                },
+                "columns": [
+                    {
+                        "id": "starter-col-13",
+                        "span": 12,
+                        "settings": {},
+                        "blocks": [
+                            {
+                                "id": "starter-blk-29",
+                                "block": "heading",
+                                "settings": {},
+                                "data": {
+                                    "level": "h2",
+                                    "text": "Questions, answered",
+                                    "align": "center"
+                                }
+                            },
+                            {
+                                "id": "starter-blk-30",
+                                "block": "faq",
+                                "settings": {},
+                                "data": {
+                                    "items": [
+                                        {
+                                            "question": "Do I need to know PHP to build a theme?",
+                                            "answer": "No. A theme is JSON, Blade templates and CSS. Blade is HTML with a few {{ }} tags for printing values."
+                                        },
+                                        {
+                                            "question": "Can editors change the colours?",
+                                            "answer": "Yes. Every token in tokens.json appears in Pages → Design, where a site can override it without editing the theme."
+                                        },
+                                        {
+                                            "question": "Will updating the theme overwrite my pages?",
+                                            "answer": "No. Demo content is only added where a page or menu does not exist yet, and a theme update never re-applies it on its own."
+                                        },
+                                        {
+                                            "question": "Where do I start?",
+                                            "answer": "Copy this theme with tools/new-theme.php, change tokens.json, then work through the guide in docs/."
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Starter — Brand call to action",
+            "kind": "section",
+            "document": {
+                "id": "starter-sec-13",
+                "type": "section",
+                "settings": {
+                    "cssClass": "starter-band--brand starter-band--center"
+                },
+                "columns": [
+                    {
+                        "id": "starter-col-14",
+                        "span": 12,
+                        "settings": {},
+                        "blocks": [
+                            {
+                                "id": "starter-blk-31",
+                                "block": "cta",
+                                "settings": {},
+                                "data": {
+                                    "layout": "centered",
+                                    "headline": "Ready when you are.",
+                                    "body": "One short sentence that tells a visitor what happens next.",
+                                    "button_primary_label": "Get started",
+                                    "button_primary_url": "#",
+                                    "button_secondary_label": "",
+                                    "button_secondary_url": ""
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "home_page_slug": "home",
+        "not_found_page_slug": "not-found",
+        "maintenance_mode": false
+    }
+}

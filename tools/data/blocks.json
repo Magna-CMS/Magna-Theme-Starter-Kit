@@ -1,0 +1,1734 @@
+{
+    "generatedBy": "tools/sync-blocks.php",
+    "sources": {
+        "magna": "1.7.0",
+        "magna-cms/pages": "0.6.0-alpha"
+    },
+    "blocks": [
+        {
+            "handle": "button",
+            "label": "Button",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "label",
+                    "type": "text",
+                    "label": "Label",
+                    "required": true
+                },
+                {
+                    "handle": "url",
+                    "type": "url",
+                    "label": "URL",
+                    "required": true
+                },
+                {
+                    "handle": "style",
+                    "type": "select",
+                    "label": "Style",
+                    "required": false,
+                    "default": "primary",
+                    "options": [
+                        "primary",
+                        "secondary",
+                        "outline",
+                        "ghost"
+                    ]
+                },
+                {
+                    "handle": "size",
+                    "type": "select",
+                    "label": "Size",
+                    "required": false,
+                    "default": "md",
+                    "options": [
+                        "sm",
+                        "md",
+                        "lg"
+                    ]
+                },
+                {
+                    "handle": "target",
+                    "type": "select",
+                    "label": "Open in",
+                    "required": false,
+                    "default": "_self",
+                    "options": [
+                        "_self",
+                        "_blank"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--button"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--button",
+                "magna-btn",
+                "magna-btn--*"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "callout",
+            "label": "Callout",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "body",
+                    "type": "textarea",
+                    "label": "Body",
+                    "required": true
+                },
+                {
+                    "handle": "heading",
+                    "type": "text",
+                    "label": "Heading",
+                    "required": false
+                },
+                {
+                    "handle": "tone",
+                    "type": "select",
+                    "label": "Tone",
+                    "required": false,
+                    "default": "info",
+                    "options": [
+                        "info",
+                        "success",
+                        "warning",
+                        "danger"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--callout",
+                "magna-callout"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--callout",
+                "magna-callout",
+                "magna-callout--*",
+                "magna-callout__heading",
+                "magna-callout__body"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "code",
+            "label": "Code",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "code",
+                    "type": "textarea",
+                    "label": "Code",
+                    "required": true
+                },
+                {
+                    "handle": "language",
+                    "type": "select",
+                    "label": "Language",
+                    "required": false,
+                    "default": "plain",
+                    "options": [
+                        "plain",
+                        "bash",
+                        "css",
+                        "html",
+                        "javascript",
+                        "json",
+                        "php",
+                        "python",
+                        "sql",
+                        "typescript",
+                        "yaml"
+                    ]
+                },
+                {
+                    "handle": "filename",
+                    "type": "text",
+                    "label": "Filename",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--code",
+                "magna-code"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--code",
+                "magna-code",
+                "magna-code__filename",
+                "magna-code__pre"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "heading",
+            "label": "Heading",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "level",
+                    "type": "select",
+                    "label": "Level",
+                    "required": false,
+                    "default": "h2",
+                    "options": [
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6"
+                    ]
+                },
+                {
+                    "handle": "text",
+                    "type": "text",
+                    "label": "Text",
+                    "required": true
+                },
+                {
+                    "handle": "align",
+                    "type": "select",
+                    "label": "Alignment",
+                    "required": false,
+                    "default": "left",
+                    "options": [
+                        "left",
+                        "center",
+                        "right"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--heading",
+                "magna-heading"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--heading",
+                "magna-heading",
+                "magna-heading--*"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "html",
+            "label": "HTML",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "content",
+                    "type": "textarea",
+                    "label": "HTML",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--html",
+                "magna-html"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--html",
+                "magna-html"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "icon",
+            "label": "Icon",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "name",
+                    "type": "icon",
+                    "label": "Icon",
+                    "required": true,
+                    "default": "core:star"
+                },
+                {
+                    "handle": "size",
+                    "type": "select",
+                    "label": "Size",
+                    "required": false,
+                    "default": "md",
+                    "options": [
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl"
+                    ]
+                },
+                {
+                    "handle": "url",
+                    "type": "url",
+                    "label": "Link",
+                    "required": false
+                },
+                {
+                    "handle": "target",
+                    "type": "select",
+                    "label": "Opens in",
+                    "required": false,
+                    "default": "_self",
+                    "options": [
+                        "_self",
+                        "_blank"
+                    ]
+                },
+                {
+                    "handle": "label",
+                    "type": "text",
+                    "label": "Accessible label",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--icon",
+                "magna-icon"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--icon",
+                "magna-icon",
+                "magna-icon--*",
+                "magna-icon__link"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "quote",
+            "label": "Quote",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "quote",
+                    "type": "textarea",
+                    "label": "Quote",
+                    "required": true
+                },
+                {
+                    "handle": "attribution",
+                    "type": "text",
+                    "label": "Attribution",
+                    "required": false
+                },
+                {
+                    "handle": "source",
+                    "type": "text",
+                    "label": "Source",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--quote",
+                "magna-quote"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--quote",
+                "magna-quote",
+                "magna-quote__text",
+                "magna-quote__attribution",
+                "magna-quote__name",
+                "magna-quote__source"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "table",
+            "label": "Table",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "rows",
+                    "type": "textarea",
+                    "label": "Rows",
+                    "required": true
+                },
+                {
+                    "handle": "separator",
+                    "type": "select",
+                    "label": "Columns separated by",
+                    "required": false,
+                    "default": "tab",
+                    "options": [
+                        "tab",
+                        "pipe",
+                        "comma",
+                        "semicolon"
+                    ]
+                },
+                {
+                    "handle": "header",
+                    "type": "select",
+                    "label": "First row is",
+                    "required": false,
+                    "default": "header",
+                    "options": [
+                        "header",
+                        "data"
+                    ]
+                },
+                {
+                    "handle": "rowHeader",
+                    "type": "select",
+                    "label": "First column is",
+                    "required": false,
+                    "default": "data",
+                    "options": [
+                        "data",
+                        "header"
+                    ]
+                },
+                {
+                    "handle": "footer",
+                    "type": "select",
+                    "label": "Last row is",
+                    "required": false,
+                    "default": "data",
+                    "options": [
+                        "data",
+                        "footer"
+                    ]
+                },
+                {
+                    "handle": "caption",
+                    "type": "text",
+                    "label": "Caption",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--table",
+                "magna-table"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--table",
+                "magna-table",
+                "magna-table__table",
+                "magna-table__caption"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "text",
+            "label": "Text",
+            "category": "content",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "body",
+                    "type": "richtext",
+                    "label": "Body",
+                    "required": true
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--text",
+                "magna-prose"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--text",
+                "magna-prose"
+            ],
+            "hooks": [],
+            "resolved": [
+                "body"
+            ],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "entries",
+            "label": "Entries",
+            "category": "dynamic",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "content_type",
+                    "type": "select",
+                    "label": "Content type",
+                    "required": true
+                },
+                {
+                    "handle": "limit",
+                    "type": "number",
+                    "label": "Number of entries",
+                    "required": false,
+                    "default": 6
+                },
+                {
+                    "handle": "sort",
+                    "type": "select",
+                    "label": "Sort by",
+                    "required": false,
+                    "default": "published_at_desc",
+                    "options": [
+                        "published_at_desc",
+                        "published_at_asc",
+                        "title_asc",
+                        "title_desc"
+                    ]
+                },
+                {
+                    "handle": "display",
+                    "type": "select",
+                    "label": "Display",
+                    "required": false,
+                    "default": "cards",
+                    "options": [
+                        "cards",
+                        "list",
+                        "grid"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--entries",
+                "magna-entries"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--entries",
+                "magna-entries",
+                "magna-entries--*",
+                "magna-entries__item",
+                "magna-entries__title",
+                "magna-entries__excerpt",
+                "magna-entries__date",
+                "magna-entries__empty"
+            ],
+            "hooks": [],
+            "resolved": [
+                "entries"
+            ],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "loop",
+            "label": "Loop",
+            "category": "dynamic",
+            "source": "magna-cms/pages",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "heading",
+                    "type": "text",
+                    "label": "Heading",
+                    "required": false
+                },
+                {
+                    "handle": "source",
+                    "type": "select",
+                    "label": "Data source",
+                    "required": true,
+                    "note": "options: data sources plugins register"
+                },
+                {
+                    "handle": "limit",
+                    "type": "number",
+                    "label": "Items",
+                    "required": false,
+                    "default": 6
+                },
+                {
+                    "handle": "pagination",
+                    "type": "select",
+                    "label": "Pagination",
+                    "required": false,
+                    "default": "none",
+                    "options": [
+                        "none",
+                        "pages"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-loop"
+            ],
+            "classes": [
+                "magna-loop",
+                "magna-loop__heading",
+                "magna-loop__items",
+                "magna-loop__item",
+                "magna-loop__image",
+                "magna-loop__body",
+                "magna-loop__title",
+                "magna-loop__description",
+                "magna-loop__date"
+            ],
+            "hooks": [],
+            "resolved": [
+                "items",
+                "pagination"
+            ],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "container",
+            "label": "Container",
+            "category": "layout",
+            "source": "core",
+            "container": true,
+            "fields": [
+                {
+                    "handle": "tag",
+                    "type": "select",
+                    "label": "HTML element",
+                    "required": false,
+                    "default": "div",
+                    "options": [
+                        "div",
+                        "section",
+                        "article",
+                        "aside",
+                        "figure",
+                        "nav"
+                    ]
+                },
+                {
+                    "handle": "role",
+                    "type": "select",
+                    "label": "Announced as",
+                    "required": false,
+                    "default": "",
+                    "options": [
+                        "",
+                        "img",
+                        "group",
+                        "figure"
+                    ]
+                },
+                {
+                    "handle": "label",
+                    "type": "text",
+                    "label": "Accessible name",
+                    "required": false,
+                    "options": [
+                        "help"
+                    ]
+                },
+                {
+                    "handle": "cssClass",
+                    "type": "text",
+                    "label": "CSS classes",
+                    "required": false,
+                    "options": [
+                        "help"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--container",
+                "magna-container"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--container",
+                "magna-container"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "divider",
+            "label": "Divider",
+            "category": "layout",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "style",
+                    "type": "select",
+                    "label": "Style",
+                    "required": false,
+                    "default": "solid",
+                    "options": [
+                        "solid",
+                        "dashed",
+                        "dotted",
+                        "icon-center"
+                    ]
+                },
+                {
+                    "handle": "icon",
+                    "type": "text",
+                    "label": "Icon (Heroicon name, only for icon-centre style)",
+                    "required": false,
+                    "default": "heroicon-o-star"
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--divider"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--divider",
+                "magna-divider",
+                "magna-divider--icon-center",
+                "magna-divider__line",
+                "magna-divider__icon",
+                "magna-divider--*"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "scheme-toggle",
+            "label": "Light / dark switch",
+            "category": "layout",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "size",
+                    "type": "select",
+                    "label": "Size",
+                    "required": false,
+                    "default": "md",
+                    "options": [
+                        "sm",
+                        "md",
+                        "lg"
+                    ]
+                },
+                {
+                    "handle": "label",
+                    "type": "text",
+                    "label": "Accessible label",
+                    "required": false,
+                    "default": "Switch between light and dark"
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--scheme-toggle",
+                "magna-scheme-toggle"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--scheme-toggle",
+                "magna-scheme-toggle",
+                "magna-scheme-toggle__button",
+                "magna-scheme-toggle__light",
+                "magna-scheme-toggle__dark"
+            ],
+            "hooks": [
+                "data-magna-scheme-toggle"
+            ],
+            "resolved": [],
+            "behaviourView": true,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "spacer",
+            "label": "Spacer",
+            "category": "layout",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "size",
+                    "type": "select",
+                    "label": "Height",
+                    "required": false,
+                    "default": "md",
+                    "options": [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                        "2xl"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--spacer",
+                "magna-spacer"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--spacer",
+                "magna-spacer",
+                "magna-spacer--*"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "cta",
+            "label": "Call to Action",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "headline",
+                    "type": "text",
+                    "label": "Headline",
+                    "required": true
+                },
+                {
+                    "handle": "body",
+                    "type": "textarea",
+                    "label": "Body text",
+                    "required": false
+                },
+                {
+                    "handle": "button_primary_label",
+                    "type": "text",
+                    "label": "Primary button label",
+                    "required": false
+                },
+                {
+                    "handle": "button_primary_url",
+                    "type": "url",
+                    "label": "Primary button URL",
+                    "required": false
+                },
+                {
+                    "handle": "button_secondary_label",
+                    "type": "text",
+                    "label": "Secondary button label",
+                    "required": false
+                },
+                {
+                    "handle": "button_secondary_url",
+                    "type": "url",
+                    "label": "Secondary button URL",
+                    "required": false
+                },
+                {
+                    "handle": "layout",
+                    "type": "select",
+                    "label": "Layout",
+                    "required": false,
+                    "default": "centered",
+                    "options": [
+                        "centered",
+                        "left-right"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--cta",
+                "magna-cta"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--cta",
+                "magna-cta",
+                "magna-cta--*",
+                "magna-cta__headline",
+                "magna-cta__body",
+                "magna-cta__actions",
+                "magna-btn",
+                "magna-btn--primary",
+                "magna-btn--outline"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "faq",
+            "label": "FAQ",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "items",
+                    "type": "repeater",
+                    "label": "FAQ items",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--faq",
+                "magna-faq"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--faq",
+                "magna-faq",
+                "magna-faq__item",
+                "magna-faq__question",
+                "magna-faq__answer"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "features",
+            "label": "Features",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "items",
+                    "type": "json",
+                    "label": "Feature items (JSON array: [{icon, title, description}])",
+                    "required": false
+                },
+                {
+                    "handle": "layout",
+                    "type": "select",
+                    "label": "Layout",
+                    "required": false,
+                    "default": "icon-grid",
+                    "options": [
+                        "icon-grid",
+                        "horizontal-list"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--features",
+                "magna-features"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--features",
+                "magna-features",
+                "magna-features--*",
+                "magna-features__item",
+                "magna-features__icon",
+                "magna-features__title",
+                "magna-features__description"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "hero",
+            "label": "Hero",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "headline",
+                    "type": "text",
+                    "label": "Headline",
+                    "required": true
+                },
+                {
+                    "handle": "subheadline",
+                    "type": "textarea",
+                    "label": "Subheadline",
+                    "required": false
+                },
+                {
+                    "handle": "background_id",
+                    "type": "media",
+                    "label": "Background image/video",
+                    "required": false
+                },
+                {
+                    "handle": "cta_primary_label",
+                    "type": "text",
+                    "label": "Primary CTA label",
+                    "required": false
+                },
+                {
+                    "handle": "cta_primary_url",
+                    "type": "url",
+                    "label": "Primary CTA URL",
+                    "required": false
+                },
+                {
+                    "handle": "cta_secondary_label",
+                    "type": "text",
+                    "label": "Secondary CTA label",
+                    "required": false
+                },
+                {
+                    "handle": "cta_secondary_url",
+                    "type": "url",
+                    "label": "Secondary CTA URL",
+                    "required": false
+                },
+                {
+                    "handle": "layout",
+                    "type": "select",
+                    "label": "Layout",
+                    "required": false,
+                    "default": "centered",
+                    "options": [
+                        "centered",
+                        "left-text-right-image",
+                        "full-bleed"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--hero",
+                "magna-hero"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--hero",
+                "magna-hero",
+                "magna-hero--*",
+                "magna-hero__content",
+                "magna-hero__headline",
+                "magna-hero__subheadline",
+                "magna-hero__ctas",
+                "magna-btn",
+                "magna-btn--primary",
+                "magna-btn--outline"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "logos",
+            "label": "Logo Bar",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "items",
+                    "type": "json",
+                    "label": "Logo items (JSON array: [{image_id, alt, url}])",
+                    "required": false
+                },
+                {
+                    "handle": "style",
+                    "type": "select",
+                    "label": "Style",
+                    "required": false,
+                    "default": "grayscale",
+                    "options": [
+                        "grayscale",
+                        "colored"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--logos",
+                "magna-logos"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--logos",
+                "magna-logos",
+                "magna-logos--*",
+                "magna-logos__item"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "pricing",
+            "label": "Pricing",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "tiers",
+                    "type": "json",
+                    "label": "Pricing tiers (JSON array: [{name, price, period, features[], cta_label, cta_url, highlighted}])",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--pricing",
+                "magna-pricing"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--pricing",
+                "magna-pricing",
+                "magna-pricing__tier",
+                "magna-pricing__name",
+                "magna-pricing__price",
+                "magna-pricing__amount",
+                "magna-pricing__period",
+                "magna-pricing__features",
+                "magna-btn",
+                "magna-btn--*"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "stats",
+            "label": "Stats",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "items",
+                    "type": "json",
+                    "label": "Stat items (JSON array: [{value, label, icon}])",
+                    "required": false
+                },
+                {
+                    "handle": "columns",
+                    "type": "select",
+                    "label": "Columns",
+                    "required": false,
+                    "default": "3",
+                    "options": [
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--stats",
+                "magna-stats"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--stats",
+                "magna-stats",
+                "magna-stats--cols-*",
+                "magna-stats__item",
+                "magna-stats__icon",
+                "magna-stats__value",
+                "magna-stats__label"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "team",
+            "label": "Team",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "members",
+                    "type": "json",
+                    "label": "Team members (JSON array: [{name, role, bio, photo_id}])",
+                    "required": false
+                },
+                {
+                    "handle": "columns",
+                    "type": "select",
+                    "label": "Columns",
+                    "required": false,
+                    "default": "3",
+                    "options": [
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--team",
+                "magna-team"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--team",
+                "magna-team",
+                "magna-team--cols-*",
+                "magna-team__member",
+                "magna-team__photo",
+                "magna-team__name",
+                "magna-team__role",
+                "magna-team__bio"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "testimonials",
+            "label": "Testimonials",
+            "category": "marketing",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "items",
+                    "type": "json",
+                    "label": "Testimonial items (JSON array: [{quote, author, role, avatar_id}])",
+                    "required": false
+                },
+                {
+                    "handle": "layout",
+                    "type": "select",
+                    "label": "Layout",
+                    "required": false,
+                    "default": "cards",
+                    "options": [
+                        "cards",
+                        "carousel"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--testimonials",
+                "magna-testimonials"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--testimonials",
+                "magna-testimonials",
+                "magna-testimonials--*",
+                "magna-testimonials__item",
+                "magna-testimonials__quote",
+                "magna-testimonials__author"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "embed",
+            "label": "Embed",
+            "category": "media",
+            "source": "magna-cms/pages",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "url",
+                    "type": "link",
+                    "label": "Video URL",
+                    "required": true
+                },
+                {
+                    "handle": "caption",
+                    "type": "text",
+                    "label": "Caption",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-embed"
+            ],
+            "classes": [
+                "magna-embed",
+                "magna-embed--*",
+                "magna-embed__frame",
+                "magna-embed__caption"
+            ],
+            "hooks": [],
+            "resolved": [
+                "embedUrl",
+                "provider"
+            ],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "file",
+            "label": "File download",
+            "category": "media",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "media_id",
+                    "type": "media",
+                    "label": "File",
+                    "required": false
+                },
+                {
+                    "handle": "label",
+                    "type": "text",
+                    "label": "Link text",
+                    "required": false
+                },
+                {
+                    "handle": "description",
+                    "type": "text",
+                    "label": "Description",
+                    "required": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--file",
+                "magna-file"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--file",
+                "magna-file",
+                "magna-file__link",
+                "magna-file__label",
+                "magna-file__meta",
+                "magna-file__description"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "gallery",
+            "label": "Gallery",
+            "category": "media",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "images",
+                    "type": "media",
+                    "label": "Images",
+                    "required": false
+                },
+                {
+                    "handle": "columns",
+                    "type": "select",
+                    "label": "Columns",
+                    "required": false,
+                    "default": "3",
+                    "options": [
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "handle": "lightbox",
+                    "type": "boolean",
+                    "label": "Enable lightbox",
+                    "required": false,
+                    "default": true
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--gallery",
+                "magna-gallery"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--gallery",
+                "magna-gallery",
+                "magna-gallery--cols-*",
+                "magna-gallery__item"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "image",
+            "label": "Image",
+            "category": "media",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "media_id",
+                    "type": "media",
+                    "label": "Image",
+                    "required": false
+                },
+                {
+                    "handle": "alt",
+                    "type": "text",
+                    "label": "Alt text",
+                    "required": false
+                },
+                {
+                    "handle": "caption",
+                    "type": "text",
+                    "label": "Caption",
+                    "required": false
+                },
+                {
+                    "handle": "display",
+                    "type": "select",
+                    "label": "Display",
+                    "required": false,
+                    "default": "full",
+                    "options": [
+                        "full",
+                        "float-left",
+                        "float-right",
+                        "captioned"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--image",
+                "magna-image"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--image",
+                "magna-image",
+                "magna-image--*"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "video",
+            "label": "Video",
+            "category": "media",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "url",
+                    "type": "url",
+                    "label": "Video URL (YouTube/Vimeo)",
+                    "required": false
+                },
+                {
+                    "handle": "media_id",
+                    "type": "media",
+                    "label": "Or: upload video file",
+                    "required": false
+                },
+                {
+                    "handle": "poster_id",
+                    "type": "media",
+                    "label": "Poster / thumbnail image",
+                    "required": false
+                },
+                {
+                    "handle": "autoplay",
+                    "type": "boolean",
+                    "label": "Autoplay (muted)",
+                    "required": false,
+                    "default": false
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--video",
+                "magna-video"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--video",
+                "magna-video",
+                "magna-video__embed",
+                "magna-video__link",
+                "magna-video__play-label"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "locale-switcher",
+            "label": "Language switcher",
+            "category": "site",
+            "source": "magna-cms/pages",
+            "container": false,
+            "fields": [],
+            "rootClasses": [
+                "magna-locale-switcher"
+            ],
+            "classes": [
+                "magna-locale-switcher",
+                "magna-locale-switcher__items",
+                "magna-locale-switcher__item",
+                "magna-locale-switcher__current"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        },
+        {
+            "handle": "logo",
+            "label": "Logo",
+            "category": "site",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "media_id",
+                    "type": "media",
+                    "label": "Logo image",
+                    "required": false
+                },
+                {
+                    "handle": "text",
+                    "type": "text",
+                    "label": "Text, when there is no image",
+                    "required": false
+                },
+                {
+                    "handle": "height",
+                    "type": "text",
+                    "label": "Height",
+                    "required": false,
+                    "default": "40px"
+                },
+                {
+                    "handle": "alt",
+                    "type": "text",
+                    "label": "Alt text",
+                    "required": false
+                },
+                {
+                    "handle": "url",
+                    "type": "url",
+                    "label": "Links to",
+                    "required": false,
+                    "default": "/"
+                },
+                {
+                    "handle": "heading",
+                    "type": "select",
+                    "label": "Is this the page's main heading?",
+                    "required": false,
+                    "default": "no",
+                    "options": [
+                        "no",
+                        "yes"
+                    ]
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--logo",
+                "magna-logo"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--logo",
+                "magna-logo",
+                "magna-logo__heading",
+                "magna-logo__link",
+                "magna-logo__image",
+                "magna-logo__text"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": true,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "nav",
+            "label": "Navigation",
+            "category": "site",
+            "source": "magna-cms/pages",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "menu",
+                    "type": "select",
+                    "label": "Menu",
+                    "required": true,
+                    "note": "options: every menu handle on the site"
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--nav",
+                "magna-nav"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--nav",
+                "magna-nav"
+            ],
+            "hooks": [],
+            "resolved": [
+                "items"
+            ],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": false
+        },
+        {
+            "handle": "search",
+            "label": "Search",
+            "category": "site",
+            "source": "core",
+            "container": false,
+            "fields": [
+                {
+                    "handle": "action",
+                    "type": "url",
+                    "label": "Results page",
+                    "required": true
+                },
+                {
+                    "handle": "placeholder",
+                    "type": "text",
+                    "label": "Placeholder",
+                    "required": false,
+                    "default": "Search…"
+                },
+                {
+                    "handle": "param",
+                    "type": "text",
+                    "label": "Query parameter",
+                    "required": false,
+                    "default": "q"
+                },
+                {
+                    "handle": "label",
+                    "type": "text",
+                    "label": "Accessible label",
+                    "required": false,
+                    "default": "Search this site"
+                }
+            ],
+            "rootClasses": [
+                "magna-block",
+                "magna-block--search",
+                "magna-search"
+            ],
+            "classes": [
+                "magna-block",
+                "magna-block--search",
+                "magna-search",
+                "magna-search__label",
+                "magna-search__input",
+                "magna-search__submit"
+            ],
+            "hooks": [],
+            "resolved": [],
+            "behaviourView": false,
+            "readsMedia": false,
+            "rendersEmpty": true
+        }
+    ]
+}
