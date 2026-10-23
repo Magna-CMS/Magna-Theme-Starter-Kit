@@ -1,7 +1,8 @@
 <h1 align="center">Magna Theme Starter Kit</h1>
 
 <p align="center">
-  Everything you need to build a theme for <strong>Magna Pages</strong>: a commented reference theme,<br>
+  A starter kit for building themes for <a href="https://github.com/Magna-CMS/Magna"><strong>Magna CMS</strong></a>
+  sites that use <strong>Magna Pages</strong>: a commented reference theme,<br>
   a step-by-step guide, a block reference generated from source, and tools that check your work before a site does.
 </p>
 
@@ -33,13 +34,21 @@ HTML and CSS, you can build a Magna theme.
 |---|---|
 | 🎨 **[Starter theme](starter-theme)** | A complete, small, heavily commented theme to read and copy: one layout, 25 tokens with light and dark values, styles for every core and Magna Pages block, two example block overrides, and demo content. Passes `magna:theme:check` clean. |
 | 📘 **[Developer guide](docs/README.md)** | 13 chapters, from *how Magna Pages renders a theme* to *publishing to the store*. Every behaviour checked against Magna's source and a running site. |
-| 🧱 **[Block reference](docs/reference/blocks.md)** | Every block's fields, options, CSS classes, resolved data and behaviour hooks, generated from Magna's own source so it can't drift. |
+| 🧱 **[Block reference](docs/reference/blocks.md)** | Every block's fields, options, CSS classes, resolved data and behaviour hooks, generated from Magna's own source and checked for drift by a weekly CI job. |
 | 🔍 **[`theme-lint`](tools/theme-lint.php)** | Checks a theme folder in under a second with only PHP installed. Mirrors `magna:theme:check`, plus checks for the mistakes the platform doesn't catch. |
 | 🛠 **[`new-theme`](tools/new-theme.php) · [`package`](tools/package.php)** | Copy Starter under your own name; build the distributable zip. |
 | 📐 **[JSON Schemas](schemas)** | Autocomplete and validation for `theme.json`, `tokens.json` and demo-content site kits. |
 | 🗺 **[The plan](ROADMAP.md)** | What this kit covers, what comes next, and what we propose for Magna itself. |
 
-## Quick start
+## Requirements
+
+- **PHP 8.1+** for the kit's tools — no Composer install and no Magna site needed (`package.php` also
+  needs the `zip` extension)
+- For trying a theme: a [Magna CMS](https://github.com/Magna-CMS/Magna) **1.6.2+** site with
+  [Magna Pages](https://github.com/Magna-CMS/Magna-Pages) **0.3.0-alpha+** enabled (see
+  [Compatibility](#compatibility))
+
+## Installation and quick start
 
 You need a local [Magna CMS](https://github.com/Magna-CMS/Magna) site with
 [Magna Pages](https://github.com/Magna-CMS/Magna-Pages) enabled. [Chapter 2](docs/02-quick-start.md)
@@ -61,8 +70,9 @@ php tools/theme-lint.php ../aurora
 php /path/to/my-magna-site/artisan magna:theme:check yourname/aurora
 ```
 
-Then open **Admin → Themes**, activate *Aurora*, choose **Import demo content**, and visit your
-site. Change `colors.primary` in `tokens.json` and reload: the whole site follows.
+Then open **Admin → Themes**, activate *Aurora*, choose **Import demo content** (Magna CMS 1.7.0+ and
+Magna Pages 0.6.0-alpha+), and visit your site. Change `colors.primary` in `tokens.json` and reload:
+the whole site follows.
 
 ## How a theme works, in one picture
 
